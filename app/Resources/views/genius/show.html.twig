@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ name }}{% endblock title %}
+
+{% block body %}
+<h1>Кто гений? {{name}}</h1>
+{{ dump() }}
+
+<ul>
+    {% for note in notes %}
+        <li>{{ note }}</li>
+    {% endfor %}
+</ul>
+{% endblock body %}
